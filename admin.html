@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت بلوط سبز</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<main class="container">
+
+    <header>
+        <h1>بلوط سبز</h1>
+        <p>پنل مدیریت محصولات</p>
+    </header>
+
+    <section class="panel">
+
+        <h2>ساخت محصول جدید</h2>
+
+        <input id="productName" type="text" placeholder="نام محصول">
+
+        <textarea id="productDescription"
+            placeholder="توضیحات محصول"></textarea>
+
+        <select id="productCategory">
+            <option value="arookhori">اردوخوری</option>
+            <option value="paziraei">سرویس پذیرایی</option>
+            <option value="decor">دکوری</option>
+        </select>
+
+        <label for="productImage">تصویر محصول</label>
+        <input id="productImage" type="file" accept="image/*">
+
+        <div id="previewBox" hidden>
+            <p>پیش‌نمایش تصویر:</p>
+            <img id="imagePreview" alt="پیش‌نمایش محصول">
+        </div>
+
+        <button id="generateBtn">تولید کد محصول</button>
+
+        <p id="statusMessage"></p>
+
+        <hr>
+
+        <h3>کد آماده محصول</h3>
+
+        <textarea id="generatedCode"
+            readonly
+            placeholder="کد محصول اینجا ساخته می‌شود..."></textarea>
+
+        <button id="copyBtn" class="secondary">
+            کپی کردن کد
+        </button>
+
+        <div class="instructions">
+            <h3>نحوه اضافه کردن محصول</h3>
+            <p>۱. عکس انتخاب‌شده را داخل پوشه images قرار بده.</p>
+            <p>۲. کد تولیدشده را کپی کن.</p>
+            <p>۳. کد را داخل بخش products-grid در فایل index.html قرار بده.</p>
+            <p>۴. سایت را ذخیره و تازه‌سازی کن.</p>
+        </div>
+
+    </section>
+
+</main>
+
+<script src="admin.js"></script>
+
+</body>
+</html>
